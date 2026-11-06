@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <h1><%= title %></h1>
-    Hello EJS!
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webshop rendelések</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Webshop rendelések</h1>
+
+    <form class="category-form">
+      <label class="category-card">
+        <input type="radio" name="kategoria" value="zoldseg" />
+        <span class="category-title">Zöldségek</span>
+        <img
+          src="https://gyerekszoba.hu/uploads/2025/04/szezonalis-zoldsegek.jpg"
+          alt="Zöldségek"
+        />
+      </label>
+
+      <label class="category-card">
+        <input type="radio" name="kategoria" value="elektronika" />
+        <span class="category-title">Elektronikai eszközök</span>
+        <img
+          src="https://i.cdn29.hu/apix_collect_c/ngg_images/2310/19/fixshop_134246_1_original_760x425_cover.jpg"
+          alt="Elektronikai eszközök"
+        />
+      </label>
+
+      <label class="category-card">
+        <input type="radio" name="kategoria" value="haztartasi" />
+        <span class="category-title">Háztartási eszközök</span>
+        <img
+          src="https://cdn.origo.hu/2025/12/YYf796Yxem732H6zeRBhEbbX0sDI0O3Dqd_6C9LQqJ4/fill/1200/675/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzYxYmE4N2QxNjYyYjRhM2E4ZmQyOTM5NjZjNDAxZWI2.webp"
+          alt="Háztartási eszközök"
+        />
+      </label>
+    </form>
+
+    <br />
+
+    <section class="order-section">
+      <h2>Vásárlói adatok és rendelés</h2>
+
+      <form id="order-form">
+        <h3>Személyes adatok</h3>
+        <label for="nev">Név:</label>
+        <input type="text" id="nev" name="nev"/>
+
+        <h3>Számlázási cím</h3>
+        <label for="szaml_varos">Város:</label>
+        <input type="text" id="szaml_varos"/>
+
+        <label for="szaml_irsz">Irányítószám:</label>
+        <input type="text" id="szaml_irsz"/>
+
+        <label for="szaml_utca">Utca és házszám:</label>
+        <input type="text" id="szaml_utca"/>
+
+        <h3>Szállítási cím</h3>
+        <label for="szall_varos">Város:</label>
+        <input type="text" id="szall_varos"/>
+
+        <label for="szall_irsz">Irányítószám:</label>
+        <input type="text" id="szall_irsz"/>
+
+        <label for="szall_utca">Utca és házszám:</label>
+        <input type="text" id="szall_utca" />
+
+        <h3>Kapcsolattartás</h3>
+
+        <label for="telefon">Telefonszám:</label>
+        <input type="tel" id="telefon" name="telefon" />
+
+        <h3>Kuponkód</h3>
+
+        <label for="kupon">Kuponkód (opcionális):</label>
+        <input type="text" id="kupon" name="kupon"/>
+
+        <h3>Fizetési adatok</h3>
+
+        <label for="kartya">Bankkártyaszám:</label>
+        <input type="text" id="kartya" name="kartya" />
+
+        <label for="lejarat">Lejárati dátum (HH/ÉÉ):</label>
+        <input type="text" id="lejarat" name="lejarat" />
+
+        <label for="biztkod">Biztonsági kód:</label>
+        <input type="password" id="biztkod" name="biztkod" />
+
+        <button type="submit">Rendelés leadása</button>
+      </form>
+    </section>
+  </body>
 </html>
